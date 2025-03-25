@@ -1,7 +1,7 @@
 <template>
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 50vh;">
         <div class="card p-4" style="width: 24rem;">
-            <h3 class="card-title text-center">Register</h3>
+            <h3 class="card-title text-center">Đăng ký</h3>
             <form @submit.prevent="handleRegister">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -12,11 +12,11 @@
                     <input type="email" class="form-control" id="email" v-model="email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">Mật khẩu</label>
                     <input type="password" class="form-control" id="password" v-model="password" required>
                 </div>
                 <p v-if="message" class="alert alert-danger custom-alert">{{ message }}</p>
-                <button type="submit" class="btn btn-primary w-100 mt-3" @click="handleRegister">Register</button>
+                <button type="submit" class="btn btn-primary w-100 mt-3" @click="handleRegister">Đăng ký</button>
             </form>
         </div>
     </div>

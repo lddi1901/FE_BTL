@@ -3,38 +3,37 @@
         <!-- Navigation Bar -->
         <div class="list-group-item d-flex justify-content-between align-items-center border p-1 rounded">
             <div>
-                <span class="fw-bold ms-2 publisher-name">Publisher name</span>
-                <span class="fw-bold publisher-address">Address</span>
+                <span class="fw-bold ms-2 publisher-name">Tên nhà xuất bản</span>
+                <span class="fw-bold publisher-address">Địa chỉ</span>
             </div>
             <div>
                 <!-- Button -->
                 <button class="btn btn-create me-2" data-bs-toggle="modal" data-bs-target="#createPublisher"
                     @click="handleClick">
                     <i class="fa-solid fa-plus"></i>
-                    Add Publisher</button>
+                    Thêm nhà xuất bản</button>
                 <!-- Model -->
                 <div class="modal fade" id="createPublisher" tabindex="-1" aria-labelledby="createNewPublisher"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content custom-modal-height">
                             <div class="modal-header">
-                                <h5 class="modal-title fw-bolder" id="createNewPublisher">Add Publisher</h5>
+                                <h5 class="modal-title fw-bolder" id="createNewPublisher">Thêm nhà xuất bản</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <label for="name">Name</label>
+                                <label for="name">Tên</label>
                                 <input type="text" v-model="newPublisherName" class="form-control mb-3" id="name">
-                                <label for="address">Address</label>
+                                <label for="address">Địa chỉ</label>
                                 <input type="text" v-model="newPublisherAddress" class="form-control mb-3" id="address">
                                 <div v-if="errorMessage" class="mt-2">
                                     <p class="alert alert-danger custom-alert p-2">{{ errorMessage }}</p>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success" @click="addPublisher">Add
-                                    Publisher</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-success" @click="addPublisher">Thêm nhà xuất bản</button>
                             </div>
                         </div>
                     </div>
@@ -64,13 +63,13 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content custom-modal-height">
                     <div class="modal-header">
-                        <h5 class="modal-title fw-bolder" id="updatePublisherLabel">Update Publisher</h5>
+                        <h5 class="modal-title fw-bolder" id="updatePublisherLabel">Cập nhật thông tin</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <label for="updateName">Name</label>
+                        <label for="updateName">Tên</label>
                         <input type="text" v-model="updatePublisherName" class="form-control mb-3" id="updateName">
-                        <label for="updateAddress">Address</label>
+                        <label for="updateAddress">Địa chỉ</label>
                         <input type="text" v-model="updatePublisherAddress" class="form-control mb-3"
                             id="updateAddress">
                         <div v-if="errorMessage" class="mt-2">

@@ -1,27 +1,27 @@
 <template>
     <div class="container mt-2 mb-4">
         <div class="d-flex justify-content-center">
-            <h1>Create Book</h1>
+            <h1>Thêm sách</h1>
         </div>
         <form @submit.prevent="handleCreateBook" @change="handleFileUpload">
             <div class="mb-3">
-                <label for="title" class="form-label">Title:</label>
+                <label for="title" class="form-label">Tên sách:</label>
                 <input type="text" v-model="book.title" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="price" class="form-label">Price:</label>
+                <label for="price" class="form-label">Giá:</label>
                 <input type="number" min="0" v-model="book.price" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="quantity" class="form-label">Quantity:</label>
+                <label for="quantity" class="form-label">Số lượng:</label>
                 <input type="number" min="0" v-model="book.quantity" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="publicationYear" class="form-label">Publication Year:</label>
+                <label for="publicationYear" class="form-label">Năm xuất bản:</label>
                 <input type="number" v-model="book.publicationYear" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="publisher" class="form-label">Publisher:</label>
+                <label for="publisher" class="form-label">Nhà xuất bản:</label>
                 <select name="publisher" id="publisher" class="form-select" v-model="book.publisher">
                     <option value=""></option>
                     <option v-for="publisher in publishers" :value="publisher">
@@ -29,11 +29,11 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="author" class="form-label">Author:</label>
+                <label for="author" class="form-label">Tác giả:</label>
                 <input type="text" v-model="book.author" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="image" class="form-label">Image:</label>
+                <label for="image" class="form-label">Ảnh sách:</label>
                 <input type="file" @change="handleFileUpload" class="form-control" />
             </div>
             <!-- Error message -->
@@ -43,9 +43,9 @@
             <!-- Button -->
             <div class="mt-4">
                 <button type="button" class="btn ms-3 btn-secondary fs-6 btn-sm ms-3"
-                    @click.prevent="handleExit">Exit</button>
+                    @click.prevent="handleExit">Thoát</button>
                 <button type="submit" class="btn btn-primary btn-sm ms-3 fs-6">
-                    Create Book</button>
+                    Thêm sách</button>
             </div>
         </form>
     </div>
@@ -82,10 +82,10 @@ export default {
         const validateForm = () => {
             errorMessage.value = '';
             if (!book.value.title) {
-                errorMessage.value = 'Please provide book title';
+                errorMessage.value = 'Hãy thêm tên sách';
                 return false;
             } else if (book.value.title.length > 100) {
-                errorMessage.value = 'Name can not be more than 100 characters';
+                errorMessage.value = 'Không được quá 100 kí tự';
                 return false;
             }
             if (!book.value.price) {

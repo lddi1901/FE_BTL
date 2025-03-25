@@ -4,27 +4,27 @@
         <div>
             <div class="navbar-brand text-dark fw-normal fs-1 fw-bold">Borrowed Books</div>
             <ul class="navbar-nav ms-auto d-flex flex-row ms-auto justify-content-center mt-3">
-                <li class="nav-item">
+                    <li class="nav-item">
                     <button class="nav-link text-primary fs-6 fw-normal" :class="{ active: activeItem === 'all' }"
-                        @click="setActive('all')">All</button>
+                        @click="setActive('all')">Tất cả</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link text-primary fs-6 fw-normal"
                         :class="{ active: activeItem === 'processing' }"
-                        @click="setActive('processing')">Requested</button>
+                        @click="setActive('processing')"> Yêu cầu</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link text-primary fs-6 fw-normal" :class="{ active: activeItem === 'borrowed' }"
-                        @click="setActive('borrowed')">Borrowed</button>
+                        @click="setActive('borrowed')">Đang mượn</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link text-primary fs-6 fw-normal" :class="{ active: activeItem === 'returned' }"
-                        @click="setActive('returned')">Returned</button>
+                        @click="setActive('returned')">Đã trả</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link text-primary fs-6 fw-normal text-danger"
                         :class="{ 'active-overdue': activeItem === 'overdue' }"
-                        @click="setActive('overdue')">Overdue</button>
+                        @click="setActive('overdue')">Quá hạn</button>
                 </li>
             </ul>
         </div>
@@ -33,19 +33,19 @@
         </div>
         <div v-else class="mt-4">
             <div v-if="activeItem === 'processing'" class="alert alert-info text-center">
-                No books have been requested.
+                Không có sách nào được yêu cầu.
             </div>
             <div v-else-if="activeItem === 'borrowed'" class="alert alert-info text-center">
-                No books have been borrowed.
+                Không có sách nào được mượn.
             </div>
             <div v-else-if="activeItem === 'returned'" class="alert alert-info text-center">
-                No books have been returned.
+                Không có sách nào được trả.
             </div>
             <div v-else-if="activeItem === 'overdue'" class="alert alert-info text-center">
-                No books are overdue.
+                Không có sách nào quá hạn.
             </div>
             <div v-else class="alert alert-info text-center">
-                You currently have no books in your list.
+                Hiện tại bạn không có sách nào trong danh sách.
             </div>
         </div>
     </div>

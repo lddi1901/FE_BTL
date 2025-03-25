@@ -8,9 +8,9 @@
         </div>
         <div class="user-actions">
             <router-link :to="{ name: 'userdetails', params: { id: user._id } }"
-                class="btn btn-details btn-sm me-2 fs-6" @click="viewDetails(user._id)">Details</router-link>
+                class="btn btn-details btn-sm me-2 fs-6" @click="viewDetails(user._id)">Thông tin</router-link>
             <router-link :to="{ name: 'edit-user', params: { id: user._id } }" class="btn btn-edit btn-sm fs-6"
-                @click="editUser(user._id)">Edit</router-link>
+                @click="editUser(user._id)">Chỉnh sửa</router-link>
         </div>
     </div>
 </template>

@@ -14,19 +14,19 @@
             <span>{{ user.role }}</span>
         </div>
         <div class="profile-item" v-if="user.birthday">
-            <label>Birth day:</label>
+            <label>Ngày sinh:</label>
             <span>{{ formatDate(user.birthday) }}</span>
         </div>
         <div class="profile-item">
-            <label>Position:</label>
+            <label>Vị trí:</label>
             <span>{{ user.position }}</span>
         </div>
         <div class="profile-item">
-            <label>Address:</label>
+            <label>Địa chỉ:</label>
             <span>{{ user.address }}</span>
         </div>
         <div class="profile-item">
-            <label>Phone Number:</label>
+            <label>Số điện thoại:</label>
             <span>{{ user.phoneNumber }}</span>
         </div>
         <div class="d-flex justify-content-end me-2">

@@ -13,8 +13,8 @@
             <div class="form-group">
                 <label for="role" class="form-label">Role:</label>
                 <select name="role" class="form-select" id="role" v-model="user.role">
-                    <option value="reader">Reader</option>
-                    <option value="employee">Employee</option>
+                    <option value="reader">Độc giả</option>
+                    <option value="employee">Quản lý</option>
                 </select>
             </div>
             <div class="d-flex justify-content-between">
@@ -28,23 +28,23 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="gender">Gender:</label>
+                <label for="gender">Giới tính:</label>
                 <input type="text" id="gender" v-model="user.gender" readonly class="readonly" />
             </div>
             <div class="form-group">
-                <label for="birthday">Birth Day:</label>
+                <label for="birthday">Ngày sinh:</label>
                 <input type="date" id="position" v-model="user.birthday" readonly class="readonly" />
             </div>
             <div class="form-group">
-                <label for="position">Position:</label>
+                <label for="position">Vị trí:</label>
                 <input type="text" id="position" v-model="user.position" readonly class="readonly" />
             </div>
             <div class="form-group">
-                <label for="address">Address:</label>
+                <label for="address">Địa chỉ:</label>
                 <input type="text" id="address" v-model="user.address" readonly class="readonly" />
             </div>
             <div class="form-group">
-                <label for="phonenumber">Phone Number:</label>
+                <label for="phonenumber">Sổ điện thoại:</label>
                 <input type="text" id="phonenumber" v-model="user.phoneNumber" readonly class="readonly" />
             </div>
             <button type="submit" class="save-button btn-save" @click="handleEditProfile">Save</button>

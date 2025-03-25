@@ -5,20 +5,20 @@
             <h5 class="card-title text-primary fw-bold fs-5">
                 <router-link :to="`/books/${book._id}`" class="no-underline">{{ book.title }}</router-link>
             </h5>
-            <p class="card-text"><strong>Author:</strong> {{ book.author }}</p>
-            <p class="card-text"><strong>Price:</strong> {{ book.price }}</p>
-            <p class="card-text"><strong>Quantity:</strong> {{ book.quantity }}</p>
+            <p class="card-text"><strong>Tác giả:</strong> {{ book.author }}</p>
+            <p class="card-text"><strong>Giá:</strong> {{ book.price }}</p>
+            <p class="card-text"><strong>Số lượng:</strong> {{ book.quantity }}</p>
         </div>
         <hr>
         <div class="d-flex justify-content-end mt-2">
             <router-link class="btn btn-danger btn-sm fs-6 fw-normal"
                 v-if="(user?.role === 'admin') || (user?.role === 'employee')"
-                :to="{ name: 'edit-book', params: { id: book._id } }">Edit</router-link>
+                :to="{ name: 'edit-book', params: { id: book._id } }">Chỉnh sửa</router-link>
             <router-link class="btn btn-primary btn-sm fs-6 fw-normal"
-                :to="{ name: 'bookdetails', params: { id: book._id } }">Details</router-link>
+                :to="{ name: 'bookdetails', params: { id: book._id } }">Thông tin</router-link>
             <!-- Button trigger modal -->
             <button :disabled="book.quantity < 1" class="btn btn-borrow btn-sm fs-6 fw-normal" data-bs-toggle="modal"
-                :data-bs-target="'#' + book._id">Borrow</button>
+                :data-bs-target="'#' + book._id">Mượn</button>
         </div>
 
         <!-- Modal -->
@@ -27,24 +27,24 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Book Borrow Confirmation</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Xác nhận mượn sách</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-0">
-                            <label class="form-label"><strong>Title:</strong></label>
+                            <label class="form-label"><strong>Tên:</strong></label>
                             <p class="form-control-plaintext mt-0">{{ book.title }}</p>
                         </div>
                         <div class="mb-0">
-                            <label class="form-label"><strong>Author:</strong></label>
+                            <label class="form-label"><strong>Tác giả:</strong></label>
                             <p class="form-control-plaintext">{{ book.author }}</p>
                         </div>
                         <div class="mb-0">
-                            <label class="form-label"><strong>Price:</strong></label>
+                            <label class="form-label"><strong>Giá:</strong></label>
                             <p class="form-control-plaintext">{{ book.price }}</p>
                         </div>
                         <div class="mb-0">
-                            <label class="form-label"><strong>Quantity:</strong></label>
+                            <label class="form-label"><strong>Số lượng:</strong></label>
                             <p class="form-control-plaintext">{{ book.quantity }}</p>
                         </div>
                         <div class="mb-0">
@@ -53,8 +53,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" @click="handleBorrow">Borrow</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-primary" @click="handleBorrow">Mượn</button>
                     </div>
                 </div>
             </div>

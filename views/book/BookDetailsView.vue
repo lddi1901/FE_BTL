@@ -7,22 +7,22 @@
             </div>
             <div class="col-md-6 ms-4">
                 <h1 class="display-4 book-title">{{ book.title }}</h1>
-                <p class="lead"><strong>Author:</strong> {{ book.author }}</p>
-                <p class="lead"><strong>Price:</strong> {{ book.price }} VND</p>
-                <p class="lead"><strong>Quantity:</strong> {{ book.quantity }}</p>
-                <p class="lead"><strong>Publication Year:</strong> {{ book.publicationYear }}</p>
-                <p class="lead"><strong>Publisher Information:</strong></p>
+                <p class="lead"><strong>Tác giả:</strong> {{ book.author }}</p>
+                <p class="lead"><strong>Giá:</strong> {{ book.price }} VND</p>
+                <p class="lead"><strong>Số lượng:</strong> {{ book.quantity }}</p>
+                <p class="lead"><strong>Năm xuất bản:</strong> {{ book.publicationYear }}</p>
+                <p class="lead"><strong>Thông tin nhà xuất bản:</strong></p>
                 <div class="mt-0 ms-4">
-                    <p class="fs-5"><strong>Name:</strong> {{ book.publisher?.name }}</p>
-                    <p class="fs-5"><strong>Address:</strong> {{ book.publisher?.address }}</p>
+                    <p class="fs-5"><strong>Tên:</strong> {{ book.publisher?.name }}</p>
+                    <p class="fs-5"><strong>Địa chỉ:</strong> {{ book.publisher?.address }}</p>
                 </div>
                 <div class="mt-4">
-                    <button class="btn me-2 btn-secondary fs-6" @click="handleExit">Exit</button>
+                    <button class="btn me-2 btn-secondary fs-6" @click="handleExit">Thoát</button>
                     <router-link v-if="user?.role === 'admin' || user === 'employee'"
                         :to="{ name: 'edit-book', params: { id: book._id } }"
-                        class="btn btn-danger me-2 fs-6">Edit</router-link>
+                        class="btn btn-danger me-2 fs-6">Chỉnh sửa</router-link>
                     <button :disabled="book.quantity < 1" class="btn btn-primary ms-2 fs-6" data-bs-toggle="modal"
-                        :data-bs-target="'#' + book._id">Borrow</button>
+                        :data-bs-target="'#' + book._id">Mượn</button>
                 </div>
             </div>
         </div>
@@ -33,34 +33,34 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Book Borrow Confirmation</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Xác nhận mượn sách</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-0">
-                        <label class="form-label"><strong>Title:</strong></label>
+                        <label class="form-label"><strong>Tên sách:</strong></label>
                         <p class="form-control-plaintext mt-0">{{ book.title }}</p>
                     </div>
                     <div class="mb-0">
-                        <label class="form-label"><strong>Author:</strong></label>
+                        <label class="form-label"><strong>Tác giả:</strong></label>
                         <p class="form-control-plaintext">{{ book.author }}</p>
                     </div>
                     <div class="mb-0">
-                        <label class="form-label"><strong>Price:</strong></label>
+                        <label class="form-label"><strong>Giá:</strong></label>
                         <p class="form-control-plaintext">{{ book.price }}</p>
                     </div>
                     <div class="mb-0">
-                        <label class="form-label"><strong>Quantity:</strong></label>
+                        <label class="form-label"><strong>Số lượng:</strong></label>
                         <p class="form-control-plaintext">{{ book.quantity }}</p>
                     </div>
                     <div class="mb-0">
-                        <label class="form-label"><strong>Duration:</strong></label>
+                        <label class="form-label"><strong>Khoảng thời gian:</strong></label>
                         <input type="number" min="1" max="90" class="form-control" v-model="duration">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" @click="handleBorrow">Borrow</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" @click="handleBorrow">Mượn</button>
                 </div>
             </div>
         </div>

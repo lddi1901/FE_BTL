@@ -5,7 +5,7 @@
                 <a href="https://www.facebook.com/" class="text-white me-3" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://github.com/dt-phat" class="text-white me-3" target="_blank">
+                <a href="https://github.com/lddi1901" class="text-white me-3" target="_blank">
                     <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://mail.google.com/" class="text-white me-3" target="_blank">

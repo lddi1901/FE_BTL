@@ -7,26 +7,26 @@
         </div>
         <div class="col-md-3">
             <h5 class="mb-0">{{ borrowing.book.title }}</h5>
-            <p class="mb-0 mt-2" v-if="borrowing.returnDate"><strong>Return Date:</strong> {{ borrowing.returnDate
+            <p class="mb-0 mt-2" v-if="borrowing.returnDate"><strong>Hạn trả:</strong> {{ borrowing.returnDate
                 ? formatDate(borrowing.returnDate) :
                 'Not returned yet' }}</p>
 
             <div class="mb-0 mt-2" v-else-if="borrowing.borrowDate">
-                <p class="mb-0"><strong>Borrow Date:</strong> {{
+                <p class="mb-0"><strong>Hạn mượn:</strong> {{
                     borrowing.borrowDate
                         ? formatDate(borrowing.borrowDate) :
                         'Not borrowed yet' }}</p>
                 <p class-="mt-0">
-                    <strong class="text-danger">Overdue Date:</strong> {{
+                    <strong class="text-danger">Thời gian quá hạn:</strong> {{
                         borrowing.borrowDate && borrowing.duration
                             ? formatDate(calculateOverdueDate(borrowing.borrowDate, borrowing.duration)) :
                             'Not borrowed yet' }}
                 </p>
             </div>
             <div class="mb-0 mt-2" v-else>
-                <p class="mb-0"><strong>Request Date:</strong> {{
+                <p class="mb-0"><strong>Hạn xử lý:</strong> {{
                     formatDate(borrowing.requestDate) }}</p>
-                <p class="mt-0"><strong>Duration:</strong> {{ borrowing.duration }}</p>
+                <p class="mt-0"><strong>Thời gian mượn:</strong> {{ borrowing.duration }}</p>
             </div>
 
         </div>
@@ -38,14 +38,14 @@
             <select name="status" id="status" v-model="borrowing.status">
                 <option value="processing"
                     :disabled="borrowing.status === 'returned' || borrowing.status === 'borrowed' || borrowing.status === 'overdue'">
-                    Processing</option>
+                    Chờ xử lý</option>
                 <option value="borrowed" :disabled="borrowing.status === 'returned' || borrowing.status === 'overdue'">
-                    Borrowed</option>
+                    Đã mượn</option>
                 <option value="returned" :disabled="borrowing.status === 'processing' || borrowing.stats === 'overdue'">
-                    Returned</option>
-                <option value="overdue" disabled>Overdue</option>
+                    Đã trả</option>
+                <option value="overdue" disabled>Quá hạn</option>
             </select>
-            <div v-if="borrowing.employee" class="mt-2"><strong>Updated by:<p class="text-center text-danger">{{
+            <div v-if="borrowing.employee" class="mt-2"><strong>Cập nhật bởi:<p class="text-center text-danger">{{
                 borrowing?.employee?.username }}</p>
                 </strong>
             </div>

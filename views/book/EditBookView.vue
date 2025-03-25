@@ -1,27 +1,27 @@
 <template>
     <div class="container mt-2 mb-4">
         <div class="d-flex justify-content-center">
-            <h1>Update Book</h1>
+            <h1>Chỉnh sửa thông tin sách</h1>
         </div>
         <form @submit.prevent="updateBook" @change="handleFileUpload">
             <div class="mb-3">
-                <label for="title" class="form-label">Title:</label>
+                <label for="title" class="form-label">Tên sách:</label>
                 <input type="text" v-model="book.title" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="price" class="form-label">Price:</label>
+                <label for="price" class="form-label">Giá sách:</label>
                 <input type="number" min="0" v-model="book.price" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="quantity" class="form-label">Quantity:</label>
+                <label for="quantity" class="form-label">Số lượng:</label>
                 <input type="number" min="0" v-model="book.quantity" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="publicationYear" class="form-label">Publication Year:</label>
+                <label for="publicationYear" class="form-label">Năm xuất bản:</label>
                 <input type="number" v-model="book.publicationYear" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="publisher" class="form-label">Publisher:</label>
+                <label for="publisher" class="form-label">Nhà xuất bản:</label>
                 <select name="publisher" v-model="book.publisher" id="publisher" class="form-select">
                     <option value=""></option>
                     <option v-for="publisher in publishers" :value="publisher">{{
@@ -29,7 +29,7 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="author" class="form-label">Author:</label>
+                <label for="author" class="form-label">Tác giả:</label>
                 <input type="text" v-model="book.author" class="form-control" />
             </div>
             <!-- Error message -->
@@ -41,8 +41,8 @@
                 <input type="file" @change="handleFileUpload" class="form-control" />
             </div>
             <div>
-                <router-link to="/books" class="btn btn-secondary">Exit</router-link>
-                <button type="submit" class="btn btn-primary ms-4" @click="handleUpdateBook">Update Book</button>
+                <router-link to="/books" class="btn btn-secondary">Thoát</router-link>
+                <button type="submit" class="btn btn-primary ms-4" @click="handleUpdateBook">Cập nhật thông tin</button>
             </div>
         </form>
     </div>

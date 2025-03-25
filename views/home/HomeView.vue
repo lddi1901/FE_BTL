@@ -2,10 +2,10 @@
     <div>
         <div class="container mt-2">
             <div class="welcome-section text-center p-2">
-                <h1 class="display-5 text-home fs-2 fw-bold mb-0">WELCOME TO MY LIBRARY!</h1>
-                <p class="lead text-home fs-5 fw-normal mb-1">Discover a world of knowledge and adventure.</p>
+                <h1 class="display-5 text-home fs-2 fw-bold mb-0">CHÀO MỪNG ĐẾN VỚI THƯ VIỆN SÁCH!</h1>
+                <p class="lead text-home fs-5 fw-normal mb-1">Discover a world of knowledge and adventure</p>
                 <router-link class="btn btn-light-blue fs-6 fw-bold mt-1" to="/books">
-                    Find Book
+                    Tìm sách
                     <i class="fa-solid fa-magnifying-glass ms-1"></i>
                 </router-link>
             </div>
@@ -22,15 +22,15 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://goldidea.vn/upload/thiet-ke-bia-sach-min.jpg" class="d-block w-100"
+                            <img src="https://bizweb.dktcdn.net/100/438/408/articles/nhung-cuon-sach-hay.jpg?v=1683514806703" class="d-block w-100"
                                 alt="Image 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://coolmompicks.com/wp-content/uploads/2014/12/Best-Kids-Books-2014.jpg"
+                            <img src="https://vcdn.tikicdn.com/assets/events/sach-hay-mua-thu/img/sach-hay-mua-thu.jpg"
                                 class="d-block w-100" alt="Image 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://nhatvietedu.vn/wp-content/uploads/2022/12/sach-ky-nang-song.jpg"
+                            <img src="https://images2.thanhnien.vn/zoom/642_401/528068263637045248/2025/3/6/bo-sach-tu-duy-17412359586082066975254-239-0-802-900-crop-17412359684641736121273.png"
                                 class="d-block w-100" alt="Image 3">
                         </div>
                     </div>

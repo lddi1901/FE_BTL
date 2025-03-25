@@ -12,21 +12,21 @@
                 'Not returned yet' }}</p>
 
             <div class="mb-0 mt-2" v-else-if="borrowing.borrowDate">
-                <p class="mb-0"><strong>Borrow Date:</strong> {{
+                <p class="mb-0"><strong>Hạn mượn:</strong> {{
                     borrowing.borrowDate
                         ? formatDate(borrowing.borrowDate) :
                         'Not borrowed yet' }}</p>
                 <p class-="mt-0">
-                    <strong class="text-danger">Overdue Date:</strong> {{
+                    <strong class="text-danger">Thời gian quá hạn:</strong> {{
                         borrowing.borrowDate && borrowing.duration
                             ? formatDate(calculateOverdueDate(borrowing.borrowDate, borrowing.duration)) :
                             'Not borrowed yet' }}
                 </p>
             </div>
             <div class="mb-0 mt-2" v-else>
-                <p class="mb-0"><strong>Request Date:</strong> {{
+                <p class="mb-0"><strong>Thời hạn xử lý:</strong> {{
                     formatDate(borrowing.requestDate) }}</p>
-                <p class="mt-0"><strong>Duration:</strong> {{ borrowing.duration }}</p>
+                <p class="mt-0"><strong>Số ngày mượn:</strong> {{ borrowing.duration }}</p>
             </div>
 
         </div>

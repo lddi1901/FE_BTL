@@ -29,21 +29,21 @@
                     <li class="nav-item ms-4" :class="{ active: activeItem === 'books' }" @click="setActive('books')">
                         <router-link class="nav-link " to="/books">
                             <i class="fa-solid fa-book"></i>
-                            Book
+                            Sách
                         </router-link>
                     </li>
                     <li v-if="user?.role === 'admin' || user?.role === 'employee'" class="nav-item ms-4"
                         :class="{ active: activeItem === 'publisher' }" @click="setActive('publisher')">
                         <router-link to="/publisher" class="nav-link">
                             <i class="fa-regular fa-copy"></i>
-                            Publisher
+                            Nhà xuất bản
                         </router-link>
                     </li>
                     <li v-if="user?.role === 'admin' || user?.role === 'employee'" class="nav-item ms-4"
                         :class="{ active: activeItem === 'borrowing' }" @click="setActive('borrowing')">
                         <router-link class="nav-link" to="/borrowings">
                             <i class="fa-solid fa-pen-to-square"></i>
-                            Borrow
+                            Danh sách mượn
                         </router-link>
                     </li>
                 </ul>
@@ -53,14 +53,14 @@
                         @click="setActive('login')">
                         <router-link class="nav-link me-2" aria-current="page" to="/login">
                             <i class="fa-solid fa-right-to-bracket"></i>
-                            Login
+                            Đăng nhập
                         </router-link>
                     </li>
                     <li class="nav-item" v-if="!user" :class="{ active: activeItem === 'register' }"
                         @click="setActive('register')">
                         <router-link class="nav-link" to="/register">
                             <i class="fa-solid fa-user-plus"></i>
-                            Register
+                            Đăng ký
                         </router-link>
                     </li>
                     <li class="nav-item dropdown dropdown-custom" v-if="user">
@@ -76,11 +76,11 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><router-link class="dropdown-item" to="/borrowedbooks">Borrowed Books</router-link></li>
+                            <li><router-link class="dropdown-item" to="/borrowedbooks">Mượn sách</router-link></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><button class="dropdown-item" @click="handleLogout">Logout</button></li>
+                            <li><button class="dropdown-item" @click="handleLogout">Đăng xuất</button></li>
                         </ul>
                     </li>
                 </ul>

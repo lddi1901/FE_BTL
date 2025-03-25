@@ -6,7 +6,7 @@
                 <router-link v-if="user?.role === 'admin' || user?.role === 'employee'" :to="{ name: 'create-book' }"
                     class="btn btn-create me-3 fs-6 fw-bold rounded-3">
                     <i class="fa-solid fa-plus"></i>
-                    Create Book
+                    Thêm sách
                 </router-link>
                 <form class="d-flex" @submit.prevent="handleSearch">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"

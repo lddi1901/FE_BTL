@@ -25,26 +25,26 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="gender">Gender:</label>
+                <label for="gender">Giới tính:</label>
                 <select name="gender" id="gender" v-model="user.gender" class="form-select">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="birthday">Birth Day:</label>
+                <label for="birthday">Ngày sinh:</label>
                 <input type="date" id="position" v-model="user.birthday" />
             </div>
             <div class="form-group">
-                <label for="position">Position:</label>
+                <label for="position">Vị trí:</label>
                 <input type="text" id="position" v-model="user.position" />
             </div>
             <div class="form-group">
-                <label for="address">Address:</label>
+                <label for="address">Địa chỉ:</label>
                 <input type="text" id="address" v-model="user.address" />
             </div>
             <div class="form-group">
-                <label for="phonenumber">Phone Number:</label>
+                <label for="phonenumber">Số điện thoại:</label>
                 <input type="text" id="phonenumber" v-model="user.phoneNumber" />
             </div>
             <button type="submit" class="btn btn-save save-button" @click="handleSaveProfile">Save</button>
