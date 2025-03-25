@@ -2,14 +2,13 @@
     <div class="custom-container">
         <nav class="nav nav-pills nav-fill mb-3">
             <a class="nav-link d-flex align-items-center justify-content-center fs-6"
-                :class="{ active: activeItem === 'all' }" aria-current="page" @click="setActive('all')">All
-                users</a>
+                :class="{ active: activeItem === 'all' }" aria-current="page" @click="setActive('all')">Tất cả</a>
 
             <a class="nav-link d-flex align-items-center justify-content-center fs-6"
-                :class="{ active: activeItem === 'employee' }" @click="setActive('employee')">Employee</a>
+                :class="{ active: activeItem === 'employee' }" @click="setActive('employee')">Quản lý</a>
 
             <a class="nav-link d-flex align-items-center justify-content-center fs-6"
-                :class="{ active: activeItem === 'reader' }" @click="setActive('reader')">Reader</a>
+                :class="{ active: activeItem === 'reader' }" @click="setActive('reader')">Độc giả</a>
 
             <form class="search-form d-flex ms-auto" @submit.prevent="handleSearch">
                 <input class="form-control me-2" type="search" placeholder="Enter user name..." v-model="searchName"
