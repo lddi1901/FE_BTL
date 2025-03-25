@@ -138,11 +138,12 @@ export default {
 };
 </script>
 <style scoped>
+/* Dropdown menu */
 .dropdown-custom .dropdown-menu {
     left: 20px;
     width: 150px;
     text-align: center;
-    background: linear-gradient(130deg, purple, blue, purple) !important;
+    background: linear-gradient(130deg, #a0c4ff, #80bfff, #a0c4ff) !important; /* Xanh dương nhạt */
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -156,7 +157,23 @@ export default {
 .dropdown-custom .dropdown-item:hover {
     background-color: white;
     font-weight: bold;
-    color: purple;
+    color: #0077cc; /* Xanh dương đậm */
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 2rem;
+    height: 75px !important;
+    background: linear-gradient(90deg, #b3daff, #99ccff, #b3daff); /* Xanh dương nhạt */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.navbar-brand:hover {
+    color: #0077cc; /* Xanh dương đậm */
 }
 
 .nav-link {
@@ -166,10 +183,11 @@ export default {
 }
 
 .nav-link:hover {
-    color: #FFB6C1 !important;
+    color: #0077cc !important;
     font-weight: bolder;
 }
 
+/* Navbar toggler */
 .navbar-toggler {
     border: none;
     outline: none;
@@ -183,21 +201,7 @@ export default {
     transform: rotate(90deg);
 }
 
-.navbar {
-    padding: 1rem 2rem;
-    height: 75px !important;
-    background: linear-gradient(90deg, #800080, #0000ff, #800080);
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    color: #ffffff;
-}
-
-.navbar-brand:hover {
-    color: #FFB6C1;
-}
-
+/* Navbar Right */
 .navbar-right {
     margin-right: 15px;
 }
@@ -206,13 +210,14 @@ export default {
     margin-right: 8px;
 }
 
+/* Active link */
 .nav-item.active .nav-link {
     color: #ffffff;
     font-weight: bold;
 }
 
 .active>* {
-    color: #FFB6C1 !important;
+    color: #0077cc !important;
 }
 
 .navbar-username {

@@ -19,11 +19,10 @@
         </div>
     </footer>
 </template>
-<script>
-</script>
+
 <style scoped>
 .fixed-bottom {
     max-height: 60px !important;
-    background: linear-gradient(90deg, #800080, #2162f3, #800080);
+    background: linear-gradient(90deg, #b3daff, #99ccff, #b3daff); /* Xanh dương nhạt */
 }
 </style>
