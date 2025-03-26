@@ -16,14 +16,14 @@
                     <li class="nav-item" :class="{ active: activeItem === 'home' }" @click="setActive('home')">
                         <router-link class="nav-link" aria-current="page" to="/">
                             <i class="fa-solid fa-house me-1"></i>
-                            Home
+                            Trang chủ
                         </router-link>
                     </li>
                     <li v-if="user?.role === 'admin'" class="nav-item ms-4" :class="{ active: activeItem === 'users' }"
                         @click="setActive('users')">
                         <router-link class="nav-link" to="/users">
                             <i class="fa-solid fa-users"></i>
-                            User
+                            Người dùng
                         </router-link>
                     </li>
                     <li class="nav-item ms-4" :class="{ active: activeItem === 'books' }" @click="setActive('books')">

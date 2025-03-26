@@ -2,7 +2,7 @@
     <div class="navbar-container mb-3 mt-8">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid justify-content-end">
-                <h1 class="me-auto text-head fs-1 fw-bold" @click="reload">Book List</h1>
+                <h1 class="me-auto text-head fs-1 fw-bold" @click="reload">Danh sách Sách</h1>
                 <router-link v-if="user?.role === 'admin' || user?.role === 'employee'" :to="{ name: 'create-book' }"
                     class="btn btn-create me-3 fs-6 fw-bold rounded-3">
                     <i class="fa-solid fa-plus"></i>

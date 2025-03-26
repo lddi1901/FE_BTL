@@ -11,17 +11,17 @@
                 :class="{ active: activeItem === 'reader' }" @click="setActive('reader')">Độc giả</a>
 
             <form class="search-form d-flex ms-auto" @submit.prevent="handleSearch">
-                <input class="form-control me-2" type="search" placeholder="Enter user name..." v-model="searchName"
+                <input class="form-control me-2" type="search" placeholder="Nhập tên người dùng..." v-model="searchName"
                     aria-label="Search">
-                <button class="search-btn btn btn-outline-white btn-search" type="submit">Search</button>
+                <button class="search-btn btn btn-outline-white btn-search" type="submit">Tìm</button>
             </form>
         </nav>
         <div class="user-item d-flex align-items-center justify-content-between p-2 mb-2 border rounded">
             <div class="user-info d-flex align-items-center">
-                <span class="sequence-number me-3 fw-bold text-head fs-5">Index</span>
-                <span class="username me-3 fw-bold text-head fs-5">User Name</span>
+                <span class="sequence-number me-3 fw-bold text-head fs-5">STT</span>
+                <span class="username me-3 fw-bold text-head fs-5">Tên người dùng</span>
                 <span class="email me-3 fw-bold text-head fs-5">Email</span>
-                <span class="role fw-bold text-head fs-5">Role</span>
+                <span class="role fw-bold text-head fs-5">Vai trò</span>
             </div>
         </div>
         <user-item v-for="(showUser, index) in showUsers" :user="showUser" :index=index></user-item>
