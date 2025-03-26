@@ -2,7 +2,7 @@
     <div class="profile-container">
         <h1>Thông tin cá nhân</h1>
         <div class="profile-item">
-            <label>User name:</label>
+            <label>Tên người dùng:</label>
             <span>{{ user.username }}</span>
         </div>
         <div class="profile-item">
@@ -10,11 +10,11 @@
             <span>{{ user.email }}</span>
         </div>
         <div class="profile-item">
-            <label>Role:</label>
+            <label>Vài trò:</label>
             <span>{{ user.role }}</span>
         </div>
         <div class="profile-item">
-            <label>Full name:</label>
+            <label>Tên:</label>
             <span>{{ user.firstname + ' ' + user.lastname }}</span>
         </div>
         <div class="profile-item">
@@ -38,11 +38,11 @@
             <span>{{ user.phoneNumber }}</span>
         </div>
         <div class="d-flex justify-content-around mt-4">
-            <router-link to="/" class="btn btn-secondary">Exit</router-link>
-            <button class="edit-button btn btn-danger" @click="editProfile">Edit Profile</button>
+            <router-link to="/" class="btn btn-secondary">Thoát</router-link>
+            <button class="edit-button btn btn-danger" @click="editProfile">Chỉnh sửa</button>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
-                Change Password
+                Đổi mật khẩu
             </button>
 
             <!-- Modal -->
@@ -51,17 +51,17 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="changePasswordLabel">Change Password</h5>
+                            <h5 class="modal-title" id="changePasswordLabel">Đổi mật khẩu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="oldpassword" class="form-label">Old Password</label>
+                                <label for="oldpassword" class="form-label">Mật khẩu cũ</label>
                                 <input type="password" class="form-control" id="oldpassword" v-model="oldPassword"
                                     required>
                             </div>
                             <div class="mb-3">
-                                <label for="newpassword" class="form-label">New Password</label>
+                                <label for="newpassword" class="form-label">Mật khẩu mới</label>
                                 <input type="password" class="form-control" id="newpassword" v-model="newPassword"
                                     required>
                             </div>
@@ -69,9 +69,8 @@
                         <p v-if="response.msg === 'Invalid Credentials'"
                             class=" alert alert-danger custom-alert ms-4 me-4">{{ response.msg }}</p>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" @click="handleChangePassword">Save
-                                changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary" @click="handleChangePassword">Lưu</button>
                         </div>
                     </div>
                 </div>

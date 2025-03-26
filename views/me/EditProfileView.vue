@@ -1,9 +1,9 @@
 <template>
     <div class="edit-profile-container">
-        <h1>Edit Profile</h1>
+        <h1>Chỉnh sửa thông tin</h1>
         <form @submit.prevent="saveProfile">
             <div class="form-group">
-                <label for="username">Username:</label>
+                <label for="username">Tên người dùng:</label>
                 <input type="text" id="username" v-model="user.username" />
             </div>
             <div class="form-group">
@@ -11,16 +11,16 @@
                 <input type="email" id="email" v-model="user.email" readonly class="readonly" />
             </div>
             <div class="form-group">
-                <label for="role">Role:</label>
+                <label for="role">Vai trò:</label>
                 <input type="text" id="role" v-model="user.role" readonly class="readonly" />
             </div>
             <div class="d-flex justify-content-between">
                 <div class="form-group flex-fill me-2">
-                    <label for="role">First name:</label>
+                    <label for="role">Họ:</label>
                     <input type="text" id="role" v-model="user.firstname" />
                 </div>
                 <div class="form-group flex-fill ms-2">
-                    <label for="role">Last name:</label>
+                    <label for="role">Tên:</label>
                     <input type="text" id="role" v-model="user.lastname" />
                 </div>
             </div>

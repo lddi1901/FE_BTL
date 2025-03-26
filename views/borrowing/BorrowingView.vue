@@ -5,9 +5,9 @@
             <div class="navbar-brand text-dark fw-normal fs-1 fw-bold mt-2 head" @click="reload">Danh sách mượn sách
             </div>
             <form class="d-flex justify-content-center custom-gap-0 ms-auto mt-2" @submit.prevent="handleSearch">
-                <input class="form-control me-4 search-input" type="search" placeholder="Enter user name ..."
+                <input class="form-control me-4 search-input" type="search" placeholder="Nhập tên người dùng ..."
                     aria-label="Search" v-model="searchText">
-                <button class="btn btn-sm btn-search">Search</button>
+                <button class="btn btn-sm btn-search">Tìm</button>
             </form>
         </div>
         <div class="d-flex justify-content-center align-items-center mt-4">
@@ -181,5 +181,9 @@ export default {
 
 .search-input {
     max-width: 300px;
+}
+.container {
+    min-width: 150vh;
+    min-height: 30vh;
 }
 </style>

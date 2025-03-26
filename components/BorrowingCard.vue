@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="col-md-2 text-end d-flex justify-content-end">
-            <button class="btn btn-danger" @click="handleUpdate">Update</button>
+            <button class="btn btn-danger" @click="handleUpdate">Cập nhật</button>
         </div>
     </div>
 </template>

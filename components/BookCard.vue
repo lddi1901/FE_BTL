@@ -97,7 +97,7 @@ export default {
     width: 18rem;
     height: 375px;
     overflow: hidden;
-}
+    }
 
 .card-title {
     display: -webkit-box;

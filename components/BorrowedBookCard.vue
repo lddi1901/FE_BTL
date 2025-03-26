@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-2 text-end">
             <router-link :to="{ name: 'bookdetails', params: { id: borrowing.book._id } }" class="btn btn-primary"
-                @click="viewDetails">View Book</router-link>
+                @click="viewDetails">Xem sách</router-link>
         </div>
     </div>
 </template>

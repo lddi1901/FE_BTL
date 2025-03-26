@@ -1,6 +1,6 @@
 <template>
     <div class="edit-profile-container">
-        <h1>Edit Profile</h1>
+        <h1>Chỉnh sửa thông tin</h1>
         <form @submit.prevent="saveProfile">
             <div class="form-group">
                 <label for="username">Username:</label>

@@ -1,8 +1,8 @@
 <template>
     <div class="profile-container mt-2">
-        <h1>{{ user.username }}'s Profile</h1>
+        <h1>Thông tin {{ user.username }}</h1>
         <div class="profile-item">
-            <label>Username:</label>
+            <label>Tên người dùng:</label>
             <span>{{ user.username }}</span>
         </div>
         <div class="profile-item">
@@ -10,7 +10,7 @@
             <span>{{ user.email }}</span>
         </div>
         <div class="profile-item">
-            <label>Role:</label>
+            <label>Vai trò:</label>
             <span>{{ user.role }}</span>
         </div>
         <div class="profile-item" v-if="user.birthday">

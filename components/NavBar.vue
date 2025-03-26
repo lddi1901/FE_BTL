@@ -72,7 +72,7 @@
                             </span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><router-link class="dropdown-item" to="/profile">Profile</router-link></li>
+                            <li><router-link class="dropdown-item" to="/profile">Thông tin</router-link></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

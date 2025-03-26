@@ -51,9 +51,9 @@
                 <div>
                     <!-- Button -->
                     <button class="btn btn-edit btn-sm me-2 fs-6 fw-normal" @click="editPublisher(publisher._id)"
-                        data-bs-toggle="modal" data-bs-target="#updatePublisher">Edit</button>
+                        data-bs-toggle="modal" data-bs-target="#updatePublisher">Sửa</button>
                     <button class="btn btn-danger btn-sm fs-6 fw-normal"
-                        @click="deleteChoosePublisher(publisher._id, publisher.name)">Delete</button>
+                        @click="deleteChoosePublisher(publisher._id, publisher.name)">Xóa</button>
                 </div>
             </li>
         </ul>
@@ -77,9 +77,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" @click="comfirmSavePublisher">Save
-                            changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <button type="button" class="btn btn-success" @click="comfirmSavePublisher">Lưu</button>
                     </div>
                 </div>
             </div>

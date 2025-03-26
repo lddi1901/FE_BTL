@@ -4,7 +4,7 @@
             <h3 class="card-title text-center">Đăng ký</h3>
             <form @submit.prevent="handleRegister">
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
+                    <label for="username" class="form-label">Tên người dùng</label>
                     <input type="text" class="form-control" id="username" v-model="username" required>
                 </div>
                 <div class="mb-3">
